@@ -1,0 +1,74 @@
+[gd_scene load_steps=10 format=3 uid="uid://b0gdo2p24l6wj"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_av1im"]
+
+[sub_resource type="SystemFont" id="SystemFont_tatj3"]
+
+[sub_resource type="Theme" id="Theme_y0ini"]
+default_font = SubResource("SystemFont_tatj3")
+default_font_size = 43
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8h0x5"]
+content_margin_left = 0.0
+bg_color = Color(0, 0.647059, 0.913725, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="SystemFont" id="SystemFont_d3ato"]
+
+[sub_resource type="Theme" id="Theme_qjlb8"]
+default_font = SubResource("SystemFont_d3ato")
+default_font_size = 19
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_amsw3"]
+bg_color = Color(0.435294, 0.564706, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hiblp"]
+bg_color = Color(0.533333, 0.584314, 0.803922, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j4i0h"]
+bg_color = Color(0.568627, 0.596078, 0.686275, 1)
+border_color = Color(0.909804, 0.803922, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_av1im")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="titre" type="Label" parent="."]
+modulate = Color(0.980392, 0.913725, 0.905882, 1)
+offset_left = -49.0
+offset_right = 343.0
+offset_bottom = 62.0
+theme = SubResource("Theme_y0ini")
+theme_override_colors/font_color = Color(0.686275, 0, 0.227451, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_8h0x5")
+text = "Bonjour"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = -119.0
+offset_top = -103.0
+offset_right = 120.0
+offset_bottom = -34.0
+theme = SubResource("Theme_qjlb8")
+theme_override_styles/normal = SubResource("StyleBoxFlat_amsw3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hiblp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j4i0h")
+text = "Click moi pour faire des trucs"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
