@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://civd1k5uab6mi"]
+
+[ext_resource type="Texture2D" uid="uid://byqg55c0a68bt" path="res://assets/kenney_medieval-rts/PNG/Default size/Unit/medievalUnit_01.png" id="1_ar287"]
+
+[node name="joueur" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(956, 559)
+scale = Vector2(13.5469, 11.9219)
+texture = ExtResource("1_ar287")
